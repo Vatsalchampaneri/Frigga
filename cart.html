@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Cart | FRIGGA Charmed Life</title>
+<meta name="description" content="Review your FRIGGA cart — authentic Feng Shui charms, jewellery and bags. Secure checkout, free worldwide shipping over ₱10,000.">
+<link rel="icon" type="image/png" href="images/frigga-logo-dark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+<style>
+:root{
+--green-deep:#0b3d2e;--green-dark:#072a1f;--green-mid:#145c44;--green-light:#1a6b50;
+--gold:#c9a96e;--gold-light:#d9c194;--gold-dark:#b08d4f;
+--cream:#faf7f2;--cream-warm:#f5f0e8;--cream-dark:#ede6d8;--white:#fff;
+--text-dark:#1a1a1a;--text-body:#3a3a3a;--text-muted:#7a7a7a;--border-light:#e5ddd0;
+--shadow-sm:0 2px 8px rgba(11,61,46,.06);--shadow-md:0 4px 20px rgba(11,61,46,.08);--shadow-lg:0 8px 40px rgba(11,61,46,.12);
+--font-serif:'Cormorant Garamond',Georgia,serif;--font-display:'Italiana','Cormorant Garamond',serif;--font-sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+--radius-sm:6px;--radius-md:12px;--radius-lg:18px;
+--transition:.3s cubic-bezier(.4,0,.2,1);
+}
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);font-size:14px;line-height:1.6;color:var(--text-body);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+.container{width:100%;max-width:1320px;margin:0 auto;padding:0 16px}
+
+/* ══════════ THEME: Utility bar ══════════ */
+.utility-bar{background:var(--green-deep);color:var(--cream);text-align:center;padding:8px 16px;font-size:11px;font-weight:500;letter-spacing:.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ══════════ THEME: Header ══════════ */
+.site-header{background:var(--white);border-bottom:1px solid var(--border-light);position:sticky;top:0;z-index:1000;box-shadow:var(--shadow-sm)}
+.header-top{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:6px 20px;font-size:11px;color:var(--text-body);border-bottom:1px solid #f0ece4;background:var(--cream-warm)}
+.header-top select{font-size:11px;border:1px solid var(--border-light);background:var(--white);color:var(--text-dark);cursor:pointer;padding:3px 8px;border-radius:var(--radius-sm);font-family:var(--font-sans);font-weight:500}
+.header-top select:focus{outline:none;border-color:var(--gold)}
+.header-top label{display:flex;align-items:center;gap:5px;font-weight:500;color:var(--text-body)}
+.header-top .divider{width:1px;height:12px;background:var(--border-light)}
+.header-main{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;max-width:1320px;margin:0 auto}
+.logo{display:flex;align-items:center;flex-shrink:0}
+.logo img{height:42px;width:auto;display:block}
+.search-bar{flex:1;max-width:520px;position:relative}
+.search-bar input{width:100%;padding:10px 42px 10px 16px;border:1.5px solid var(--border-light);border-radius:30px;font-size:13px;background:var(--cream);transition:var(--transition)}
+.search-bar input::placeholder{color:#aaa}
+.search-bar input:focus{outline:none;border-color:var(--gold);background:var(--white);box-shadow:0 0 0 3px rgba(201,169,110,.12)}
+.search-bar button{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--green-deep);color:var(--white);display:flex;align-items:center;justify-content:center}
+.header-actions{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.action-btn{display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 8px;font-size:9px;font-weight:500;color:var(--text-body);transition:var(--transition);position:relative;white-space:nowrap}
+.action-btn:hover{color:var(--green-deep)}
+.action-btn svg{width:20px;height:20px;stroke-width:1.5}
+.action-btn .badge{position:absolute;top:1px;right:2px;background:var(--gold);color:var(--white);font-size:8px;font-weight:700;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.mobile-menu-toggle{display:none;flex-direction:column;gap:4px;padding:8px;cursor:pointer}
+.mobile-menu-toggle span{display:block;width:22px;height:2px;background:var(--text-dark);border-radius:2px}
+
+/* ══════════ THEME: Nav ══════════ */
+.main-nav{background:var(--white);border-top:1px solid #f0ece4;border-bottom:2px solid var(--gold)}
+.nav-inner{display:flex;align-items:center;gap:2px;max-width:1320px;margin:0 auto;padding:0 16px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-item{position:relative;flex-shrink:0}
+.nav-link{display:flex;align-items:center;gap:3px;padding:12px 12px;font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--text-dark);transition:var(--transition);white-space:nowrap}
+.nav-link:hover{color:var(--gold-dark)}
+.nav-link .chevron{width:11px;height:11px}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:var(--white);border:1px solid var(--border-light);border-top:2px solid var(--gold);box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transform:translateY(8px);transition:var(--transition);z-index:100;padding:10px 0}
+.nav-item:hover .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown a{display:block;padding:8px 18px;font-size:13px;color:var(--text-body);transition:var(--transition)}
+.nav-dropdown a:hover{background:var(--cream);color:var(--green-deep);padding-left:22px}
+.nav-dropdown .dropdown-heading{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dark);padding:8px 18px 4px}
+.nav-brand-item{flex-shrink:0}
+.nav-brand-link{padding:8px 10px !important;letter-spacing:0 !important;text-transform:none !important;display:flex;align-items:center}
+.nav-brand-img{height:28px;width:auto;object-fit:contain;transition:transform .2s ease}
+.nav-brand-link:hover .nav-brand-img{transform:scale(1.05)}
+.destara-link .nav-brand-img{filter:brightness(0) invert(1);height:24px}
+.marites-link .nav-brand-img{height:20px}
+
+/* ══════════ CART page ══════════ */
+.cart-hero{background:var(--white);padding:30px 0 0;border-bottom:1px solid var(--border-light)}
+.cart-title{text-align:center;font-family:var(--font-serif);font-size:clamp(28px,3.4vw,40px);font-weight:500;color:var(--text-dark);letter-spacing:.5px}
+.cart-count{display:block;font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:6px}
+
+/* free-shipping progress (Shopify-style) */
+.ship-bar{max-width:640px;margin:18px auto 26px;text-align:center}
+.ship-msg{font-size:12.5px;color:var(--text-body);margin-bottom:9px}
+.ship-msg b{color:var(--green-deep);font-weight:700}
+.ship-msg .away{color:var(--gold-dark);font-weight:700}
+.ship-track{height:7px;background:var(--cream-dark);border-radius:20px;overflow:hidden;position:relative}
+.ship-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-dark));border-radius:20px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.ship-fill.full{background:linear-gradient(90deg,#1a7a3e,var(--green-mid))}
+.ship-ico{margin-bottom:6px}
+
+/* layout */
+.cart-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(340px,.9fr);gap:40px;align-items:start;padding:36px 0 60px}
+.cart-items-head{display:flex;justify-content:space-between;align-items:center;padding:0 0 14px;border-bottom:2px solid var(--green-deep);margin-bottom:8px}
+.cart-items-head .th-prod{font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--text-dark)}
+.cart-items-head .th-qty{text-align:center}
+.cart-items-head .th-tot{text-align:right}
+
+/* line item */
+.citem{display:grid;grid-template-columns:96px minmax(0,1fr) 130px 110px;gap:18px;align-items:center;padding:22px 0;border-bottom:1px solid var(--border-light);animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.citem-img{width:96px;aspect-ratio:1;border:1px solid var(--border-light);border-radius:var(--radius-sm);overflow:hidden;background:var(--white)}
+.citem-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.citem:hover .citem-img img{transform:scale(1.05)}
+.citem-name{font-family:var(--font-serif);font-size:18px;font-weight:600;color:var(--text-dark);line-height:1.2;margin-bottom:5px}
+.citem-name:hover{color:var(--green-deep)}
+.citem-variant{font-size:11.5px;color:var(--text-muted);line-height:1.55}
+.citem-variant b{color:var(--text-body);font-weight:500}
+.citem-unit{font-size:11.5px;color:var(--text-muted);margin-top:5px}
+.citem-remove{display:inline-flex;align-items:center;gap:5px;margin-top:9px;font-size:11px;font-weight:500;color:var(--text-muted);transition:var(--transition)}
+.citem-remove:hover{color:#c0392b}
+.citem-remove svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.6}
+.citem-qty{justify-self:center}
+.qty{display:flex;align-items:center;border:1.5px solid var(--border-light);border-radius:8px;overflow:hidden;background:var(--white)}
+.qty button{width:34px;height:40px;font-size:17px;color:var(--text-body);background:var(--cream);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.qty button:hover{background:var(--cream-dark)}
+.qty input{width:38px;height:40px;text-align:center;border:none;font-size:13px;font-weight:600;background:var(--white)}
+.citem-tot{justify-self:end;text-align:right}
+.citem-price{font-size:16px;font-weight:700;color:var(--green-deep)}
+.citem-price s{display:block;font-size:11.5px;color:var(--text-muted);font-weight:400}
+.continue-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:12.5px;font-weight:600;color:var(--green-mid);transition:var(--transition)}
+.continue-link:hover{color:var(--gold-dark);gap:11px}
+.continue-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* summary card */
+.summary{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:26px 24px;position:sticky;top:130px;box-shadow:var(--shadow-sm)}
+.summary h2{font-family:var(--font-serif);font-size:22px;font-weight:600;color:var(--text-dark);letter-spacing:.5px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-light)}
+.sum-row{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:7px 0}
+.sum-row b{font-weight:500;color:var(--text-muted)}
+.sum-row .val{font-weight:700;color:var(--text-dark)}
+.sum-sub .val{font-size:17px;color:var(--green-deep)}
+.sum-disc{color:#27ae60}
+.sum-disc .val{color:#27ae60}
+.sum-disc button{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:rgba(39,174,96,.12);color:#27ae60;font-size:10px;margin-left:6px;vertical-align:1px}
+.sum-total{border-top:1px solid var(--border-light);margin-top:10px;padding-top:14px}
+.sum-total b{font-weight:600;color:var(--text-dark);font-size:14px}
+.sum-total .val{font-size:21px;font-weight:700;color:var(--green-deep);font-family:var(--font-serif)}
+.sum-note{font-size:11px;color:var(--text-muted);text-align:center;margin:12px 0 16px;line-height:1.5}
+/* discount code */
+.disc-form{display:flex;gap:0;margin-bottom:16px}
+.disc-form input{flex:1;border:1.5px solid var(--border-light);border-right:none;border-radius:8px 0 0 8px;padding:10px 13px;font-size:12.5px;background:var(--cream);outline:none;transition:var(--transition);text-transform:uppercase;letter-spacing:.5px}
+.disc-form input:focus{border-color:var(--gold);background:var(--white)}
+.disc-form input.err{border-color:#c0392b;animation:shake .3s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.disc-form button{padding:10px 16px;background:var(--green-deep);color:var(--white);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:0 8px 8px 0;transition:var(--transition)}
+.disc-form button:hover{background:var(--gold-dark)}
+.disc-msg{font-size:11px;margin:-10px 0 12px;color:#27ae60}
+.disc-msg.error{color:#c0392b}
+/* order note */
+.note-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;font-size:12.5px;font-weight:600;color:var(--green-mid);padding:10px 0;border-top:1px dashed var(--border-light);border-bottom:1px dashed var(--border-light);margin-bottom:16px;transition:var(--transition)}
+.note-toggle:hover{color:var(--gold-dark)}
+.note-toggle svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;transition:transform .3s}
+.note-toggle.open svg{transform:rotate(180deg)}
+.note-box{display:none;margin-bottom:16px}
+.note-box.open{display:block;animation:fadeUp .3s ease}
+.note-box textarea{width:100%;min-height:88px;border:1.5px solid var(--border-light);border-radius:8px;padding:10px 12px;font-size:12.5px;font-family:var(--font-sans);background:var(--cream);resize:vertical;outline:none;line-height:1.6}
+.note-box textarea:focus{border-color:var(--gold);background:var(--white)}
+/* checkout */
+.btn-checkout{width:100%;padding:17px;background:var(--green-deep);color:var(--white);font-size:13px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:10px;transition:var(--transition)}
+.btn-checkout:hover{background:var(--gold-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(176,141,79,.35)}
+.btn-checkout svg{width:17px;height:17px}
+.btn-checkout.processing{opacity:.7;pointer-events:none}
+.or-continue{text-align:center;font-size:12px;color:var(--text-muted);margin-top:12px}
+.or-continue a{color:var(--green-mid);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.or-continue a:hover{color:var(--gold-dark)}
+.pay-icons{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--border-light)}
+.pay-badge{height:24px;padding:0 8px;border-radius:3px;background:var(--white);border:1px solid var(--border-light);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--text-body)}
+.sum-trust{margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.sum-trust div{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--text-muted)}
+.sum-trust svg{width:13px;height:13px;stroke:var(--gold-dark);fill:none;stroke-width:1.6;flex-shrink:0}
+
+/* empty state */
+.cart-empty{display:none;text-align:center;padding:70px 16px 80px}
+.cart-empty.show{display:block;animation:fadeUp .4s ease}
+.cart-empty .ico{width:84px;height:84px;margin:0 auto 22px;border-radius:50%;background:var(--cream-warm);border:1px solid var(--gold-light);display:flex;align-items:center;justify-content:center}
+.cart-empty .ico svg{width:38px;height:38px;stroke:var(--gold-dark);fill:none;stroke-width:1.3}
+.cart-empty h2{font-family:var(--font-serif);font-size:32px;font-weight:500;color:var(--text-dark);margin-bottom:8px}
+.cart-empty p{font-size:13px;color:var(--text-muted);margin-bottom:26px}
+.btn-shop{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;background:var(--green-deep);color:var(--white);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:8px;transition:var(--transition)}
+.btn-shop:hover{background:var(--gold-dark);transform:translateY(-1px)}
+/* trust strip (boldwrist-style) */
+.trust-strip{background:var(--white);border-top:1px solid var(--border-light);padding:36px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.trust-cell{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.trust-cell .t-ico{width:52px;height:52px;border-radius:50%;background:var(--cream-warm);border:1px solid var(--gold-light);display:flex;align-items:center;justify-content:center}
+.trust-cell .t-ico svg{width:24px;height:24px;stroke:var(--gold-dark);fill:none;stroke-width:1.4}
+.trust-cell b{display:block;font-size:12px;font-weight:700;color:var(--text-dark);letter-spacing:.3px}
+.trust-cell span{font-size:11px;color:var(--text-muted);line-height:1.5}
+
+/* cross-sell (theme cards) */
+.cross-sell{padding:52px 0 64px;background:var(--cream)}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.section-title{font-family:var(--font-serif);font-size:clamp(22px,2.6vw,30px);font-weight:500;color:var(--text-dark);letter-spacing:-.3px}
+.section-title small{display:block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:5px}
+.cross-sell .section-header{text-align:center;flex-direction:column;align-items:center;margin-bottom:28px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{background:transparent;border-radius:0;overflow:visible;border:none;transition:transform .3s ease;position:relative;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-4px)}
+.product-badge{position:absolute;top:8px;left:8px;z-index:2;padding:2px 8px;font-size:7px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border-radius:20px}
+.product-badge.bestseller{background:var(--gold);color:var(--white)}
+.product-badge.new{background:var(--green-deep);color:var(--white)}
+.product-img{position:relative;aspect-ratio:1;background:var(--white);border-radius:var(--radius-md) var(--radius-md) 0 0;overflow:hidden;transition:background .3s ease;border:1px solid var(--border-light);border-bottom:none}
+.product-card:hover .product-img{background:var(--cream)}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:opacity .4s ease,transform .4s ease}
+.product-img .img-default{object-fit:contain;padding:10px}
+.product-card:hover .product-img .img-default{transform:scale(1.04)}
+.product-wishlist{position:absolute;top:6px;right:6px;z-index:3;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(-4px);transition:var(--transition);box-shadow:var(--shadow-sm)}
+.product-card:hover .product-wishlist{opacity:1;transform:translateY(0)}
+.product-wishlist svg{width:14px;height:14px;stroke:var(--text-body);fill:none;stroke-width:1.5}
+.product-info{padding:12px 12px 14px;flex:1;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border-light);border-top:none;border-radius:0 0 var(--radius-md) var(--radius-md)}
+.product-name{font-family:var(--font-serif);font-size:16px;font-weight:500;color:var(--text-dark);line-height:1.25;margin-bottom:6px;min-height:38px}
+.product-card:hover .product-name{color:var(--green-deep)}
+.product-price{font-size:16px;font-weight:700;color:var(--green-deep);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.product-price s{font-size:12px;color:var(--text-muted);font-weight:400}
+.product-stars{font-size:11px;color:var(--gold);letter-spacing:1px;margin-top:4px}
+.product-stars span{color:var(--text-muted);font-size:10.5px;letter-spacing:0}
+.product-add{width:100%;margin-top:10px;padding:10px;background:var(--green-deep);color:var(--white);font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;border-radius:var(--radius-sm);transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:6px}
+.product-add:hover{background:var(--gold-dark)}
+.product-add.added{background:#1a7a3e}
+.product-add svg{width:13px;height:13px}
+
+/* toast */
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--text-dark);color:var(--white);font-size:12.5px;font-weight:500;padding:13px 22px;border-radius:30px;box-shadow:var(--shadow-lg);z-index:3000;opacity:0;transition:all .35s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;gap:9px;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.toast svg{width:15px;height:15px;stroke:#7dcea0;fill:none;stroke-width:2}
+
+/* ══════════ THEME: Footer ══════════ */
+.site-footer{background:#f8f4ed;color:var(--text-body);padding:48px 0 0;font-size:13px}
+.footer-grid{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:28px;max-width:1320px;margin:0 auto;padding:0 20px 36px}
+.footer-brand .logo{align-items:flex-start;margin-bottom:12px}
+.footer-brand .logo img{height:40px}
+.footer-brand p{font-size:11px;line-height:1.7;color:var(--text-muted);max-width:240px}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px}
+.footer-col ul li{margin-bottom:7px;list-style:none}
+.footer-col ul li a{font-size:11px;color:var(--text-muted);transition:var(--transition)}
+.footer-col ul li a:hover{color:var(--green-deep);padding-left:3px}
+.footer-trust{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.footer-trust-item{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--text-muted)}
+.footer-trust-item svg{width:14px;height:14px;stroke:var(--gold-dark)}
+.footer-bottom{border-top:1px solid var(--border-light);padding:16px 20px;max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:10px;color:var(--text-muted)}
+.footer-payments{display:flex;gap:5px;align-items:center}
+.footer-legal{display:flex;gap:14px}
+.footer-legal a{font-size:10px;color:var(--text-muted)}
+
+/* ══════════ THEME: Mobile drawer ══════════ */
+.mobile-drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;opacity:0;transition:opacity .3s}
+.mobile-drawer-overlay.active{display:block;opacity:1}
+.mobile-drawer{position:fixed;top:0;left:-320px;width:300px;max-width:85vw;height:100%;background:var(--white);z-index:2001;transition:left .35s cubic-bezier(.4,0,.2,1);overflow-y:auto;box-shadow:var(--shadow-lg)}
+.mobile-drawer.active{left:0}
+.drawer-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border-light);background:var(--green-deep);color:var(--white)}
+.drawer-close{width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:18px}
+.drawer-search{padding:12px 16px;border-bottom:1px solid var(--border-light)}
+.drawer-search input{width:100%;padding:10px 14px;border:1px solid var(--border-light);border-radius:30px;font-size:13px;background:var(--cream)}
+.drawer-nav{padding:6px 0}
+.drawer-nav>li>a,.drawer-nav>li>button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 18px;font-size:13px;font-weight:600;color:var(--text-dark);text-align:left;border-bottom:1px solid #f5f0e8}
+.drawer-nav .submenu{display:none;background:var(--cream)}
+.drawer-nav .submenu.open{display:block}
+.drawer-nav .submenu a{display:block;padding:10px 18px 10px 32px;font-size:12px;color:var(--text-body);border-bottom:1px solid #ede6d8}
+.drawer-brand-links{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.drawer-store-selector{padding:14px 16px;border-top:1px solid var(--border-light)}
+.drawer-store-selector label{display:block;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px}
+.drawer-store-selector select{width:100%;padding:9px;border:1px solid var(--border-light);border-radius:var(--radius-sm);font-size:12px;background:var(--white)}
+
+/* sticky mobile checkout */
+.sticky-checkout{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid var(--border-light);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:998;box-shadow:0 -4px 20px rgba(0,0,0,.08);gap:10px;align-items:center}
+.sticky-checkout .sc-total{font-family:var(--font-serif);font-size:19px;font-weight:700;color:var(--green-deep);white-space:nowrap}
+.sticky-checkout .sc-total small{display:block;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-sans)}
+.sticky-checkout .sc-btn{flex:1;padding:13px;background:var(--green-deep);color:var(--white);font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;border-radius:8px;text-align:center}
+
+/* ══════════ Responsive ══════════ */
+@media(max-width:1024px){
+.footer-grid{grid-template-columns:repeat(3,1fr)}
+.footer-brand{grid-column:1/-1}
+.cart-layout{grid-template-columns:1fr;gap:30px}
+.summary{position:static}
+.product-grid{grid-template-columns:repeat(3,1fr)}
+.trust-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+.header-top{display:none}
+.mobile-menu-toggle{display:flex}
+.search-bar{display:none}
+.header-actions .action-btn span{display:none}
+.action-btn{padding:5px 5px}
+.main-nav{display:none}
+body{padding-bottom:74px}
+.logo img{height:34px}
+.header-main{padding:8px 12px}
+.cart-layout{padding:26px 0 44px}
+.citem{grid-template-columns:80px minmax(0,1fr);grid-template-areas:'img name' 'img qty' 'img tot';gap:6px 14px;padding:18px 0}
+.citem-img{grid-area:img;width:80px}
+.ci-body{grid-area:name}
+.citem-qty{grid-area:qty;justify-self:start}
+.citem-tot{grid-area:tot;justify-self:end;text-align:right}
+.cart-items-head{display:none}
+.product-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+.product-info{padding:10px}
+.product-name{font-size:14px;min-height:36px}
+.product-price{font-size:14px}
+.footer-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+.footer-bottom{flex-direction:column;text-align:center}
+.sticky-checkout{display:flex}
+.trust-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+.product-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+.citem{grid-template-columns:64px minmax(0,1fr)}
+.citem-img{width:64px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ UTILITY BAR (theme) ══════════ -->
+<div class="utility-bar">🚚 FREE WORLDWIDE SHIPPING ON ORDERS ABOVE ₱10,000.00</div>
+
+<!-- ══════════ HEADER (theme) ══════════ -->
+<header class="site-header">
+  <div class="header-top">
+    <label>Shop:<select aria-label="Store"><option>frigga.com.ph</option><option>frigga.co.uk</option><option>frigga-usa.com</option></select></label>
+    <span class="divider"></span>
+    <label>Language / Country:<select aria-label="Language"><option>English / Philippines / PHP</option><option>English / UK / GBP</option><option>English / USA / USD</option><option>日本語 / Japan / JPY</option><option>中文 / Singapore / SGD</option></select></label>
+  </div>
+  <div class="header-main">
+    <button class="mobile-menu-toggle" aria-label="Menu" onclick="toggleDrawer()"><span></span><span></span><span></span></button>
+    <a href="frigga-homepage.html" class="logo" aria-label="FRIGGA home">
+      <img src="images/frigga-logo-dark.png" alt="FRIGGA Charmed Life" height="42">
+    </a>
+    <div class="search-bar"><input type="search" placeholder="Search charms, jewellery, bags, intentions…" aria-label="Search"><button aria-label="Search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+    <div class="header-actions">
+      <a href="#" class="action-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Wishlist</span></a>
+      <a href="#" class="action-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Account</span></a>
+      <a href="cart.html" class="action-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Cart</span><span class="badge" id="cartBadge">0</span></a>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Main">
+    <div class="nav-inner">
+      <div class="nav-item"><a href="#" class="nav-link">New Arrivals</a></div>
+      <div class="nav-item"><button class="nav-link">Shop by Intention<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown"><a href="#">Wealth &amp; Abundance</a><a href="#">Love &amp; Relationships</a><a href="#">Health &amp; Wellbeing</a><a href="#">Career &amp; Success</a><a href="#">Peace &amp; Harmony</a><a href="#">Marriage</a><a href="#">Protection</a><a href="#">Misfortune Protection</a><a href="#">Anti-Robbery</a><a href="#">Legal Protection</a><a href="#">Business Success</a><a href="#">View All →</a></div></div>
+      <div class="nav-item"><button class="nav-link">Shop by Sign<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown"><a href="#">🐀 Rat</a><a href="#">🐂 Ox</a><a href="#">🐅 Tiger</a><a href="#">🐇 Rabbit</a><a href="#">🐉 Dragon</a><a href="#">🐍 Snake</a><a href="#">🐎 Horse</a><a href="#">🐐 Goat/Sheep</a><a href="#">🐒 Monkey</a><a href="#">🐓 Rooster</a><a href="#">🐕 Dog</a><a href="#">🐖 Pig</a></div></div>
+      <div class="nav-item"><button class="nav-link">Collections<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown"><div class="dropdown-heading">Jewellery</div><a href="#">Bangles &amp; Bracelets</a><a href="#">Rings</a><a href="#">Necklaces &amp; Pendants</a><a href="#">Earrings</a><div class="dropdown-heading">Accessories</div><a href="#">Lucky Wealth Bags</a><a href="#">Shawls &amp; Scarves</a><a href="#">Wallets</a><a href="#">Key Chains</a><div class="dropdown-heading">Home &amp; Lifestyle</div><a href="#">Books, Almanacs &amp; Planners</a><a href="#">Water Fountains</a><a href="#">Lucky Plants</a><a href="#">Figurines &amp; Decor</a></div></div>
+      <div class="nav-item"><a href="#" class="nav-link">Best Sellers</a></div>
+      <div class="nav-item"><button class="nav-link">Feng Shui Guide<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown"><a href="#">What is Feng Shui?</a><a href="#">2026 Annual Forecast</a><a href="#">Monthly Forecasts</a><a href="#">Lucky Colours Guide</a><a href="#">Animal Sign Guide</a><a href="#">Crystals &amp; Meanings</a><a href="#">Feng Shui Tips</a></div></div>
+      <div class="nav-item"><a href="#" class="nav-link">Reviews</a></div>
+      <div class="nav-item"><button class="nav-link">About<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown"><a href="#">Our Story</a><a href="#">Why FRIGGA</a><a href="#">Authenticity &amp; Blessing</a><a href="#">Press &amp; Media</a><a href="#">Careers</a></div></div>
+      <div class="nav-item nav-brand-item"><a href="https://destara.app" target="_blank" class="nav-link nav-brand-link destara-link" aria-label="Discover Destara"><img src="images/destara-logo-nobg.png" alt="Destara" class="nav-brand-img"></a></div>
+      <div class="nav-item nav-brand-item"><a href="https://www.maritesallen.com" target="_blank" class="nav-link nav-brand-link marites-link" aria-label="Marites Allen"><img src="images/marites-logo-nobg.png" alt="Marites Allen" class="nav-brand-img marites-img"></a></div>
+    </div>
+  </nav>
+</header>
+
+<!-- ══════════ CART ══════════ -->
+<section class="cart-hero">
+  <div class="container">
+    <h1 class="cart-title"><span class="cart-count" id="cartCountLabel">Your lucky pieces</span>Your Cart</h1>
+    <div class="ship-bar" id="shipBar">
+      <div class="ship-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <p class="ship-msg" id="shipMsg">You're <span class="away" id="shipAway"></span> away from <b>FREE worldwide shipping</b></p>
+      <div class="ship-track"><div class="ship-fill" id="shipFill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- populated cart -->
+<div class="container" id="cartWrap">
+  <div class="cart-layout">
+    <!-- items -->
+    <div>
+      <div class="cart-items-head">
+        <span class="th-prod">Product</span>
+        <span class="th-qty" style="font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--text-dark)">Quantity</span>
+        <span class="th-tot" style="font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--text-dark)">Total</span>
+      </div>
+      <div id="cartItems"></div>
+      <a href="product-detail.html" class="continue-link"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>Continue shopping</a>
+    </div>
+
+    <!-- summary -->
+    <aside class="summary">
+      <h2>Order Summary</h2>
+      <div class="disc-form">
+        <input type="text" id="discInput" placeholder="Discount code" aria-label="Discount code">
+        <button onclick="applyDiscount()">→</button>
+      </div>
+      <p class="disc-msg" id="discMsg" style="display:none"></p>
+      <div class="sum-row sum-sub"><b>Subtotal</b><span class="val" id="sumSubtotal">₱0.00</span></div>
+      <div class="sum-row sum-disc" id="discRow" style="display:none"><b>Discount <span id="discCode"></span><button onclick="clearDiscount()" aria-label="Remove discount" title="Remove discount">×</button></b><span class="val" id="discVal"></span></div>
+      <div class="sum-row" id="saveRow" style="display:none"><b>You're saving</b><span class="val" id="saveVal" style="color:#27ae60"></span></div>
+      <div class="sum-row sum-total"><b>Estimated total</b><span class="val" id="sumTotal">₱0.00</span></div>
+      <p class="sum-note">Taxes, duties &amp; shipping <br>calculated at checkout</p>
+
+      <button class="note-toggle" id="noteToggle" onclick="toggleNote(this)"><span>🎁 Add order note / gift message</span><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="note-box" id="noteBox"><textarea id="orderNote" placeholder="How can we personalise your order? e.g. gift message, animal sign for the blessing card…"></textarea></div>
+
+      <button class="btn-checkout" id="checkoutBtn" onclick="checkout(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="checkoutLabel">Checkout · <span id="checkoutTotal">₱0.00</span></span></button>
+      <p class="or-continue">or <a href="product-detail.html">continue shopping</a></p>
+
+      <div class="pay-icons"><span class="pay-badge" style="color:#1a1f71;font-weight:700;">VISA</span><span class="pay-badge" style="background:#eb001b;color:#fff;font-weight:700;">MC</span><span class="pay-badge" style="background:#5a31f4;color:#fff;font-weight:700;">Amex</span><span class="pay-badge" style="background:#003087;color:#fff;font-weight:700;">PayPal</span><span class="pay-badge" style="background:#000;color:#fff;font-weight:700;">GPay</span><span class="pay-badge" style="background:#000;color:#fff;font-weight:700;">ApplePay</span></div>
+      <div class="sum-trust">
+        <div><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secure 256-bit SSL encrypted checkout</div>
+        <div><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Authentic &amp; master-blessed pieces</div>
+        <div><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.5 15a9 9 0 0 0 14.8 3.3L23 14"/><polyline points="23 20 23 14 17 14"/></svg>15-day hassle-free returns</div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- empty state (boldwrist-style) -->
+<div class="cart-empty" id="cartEmpty">
+  <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+  <h2>Your cart is empty</h2>
+  <p>Fill it with a little luck — charms, jewellery and bags blessed for your journey.</p>
+  <a href="product-detail.html" class="btn-shop">Continue shopping</a>
+</div>
+
+<!-- trust strip -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-cell"><div class="t-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></div><div><b>Master Blessed</b><span>Every piece energised before dispatch</span></div></div>
+      <div class="trust-cell"><div class="t-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><b>Worldwide Delivery</b><span>Free shipping above ₱10,000</span></div></div>
+      <div class="trust-cell"><div class="t-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.5 15a9 9 0 0 0 14.8 3.3L23 14"/><polyline points="23 20 23 14 17 14"/></svg></div><div><b>15-Day Returns</b><span>Hassle-free, worldwide</span></div></div>
+      <div class="trust-cell"><div class="t-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><b>120,000+ Customers</b><span>Trusted in 100+ countries</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CROSS-SELL ══════════ -->
+<section class="cross-sell">
+  <div class="container">
+    <div class="section-header"><h2 class="section-title"><small>Complete Your Charms</small>You May Also Love</h2></div>
+    <div class="product-grid">
+
+      <div class="product-card" data-id="amulet" data-name="Annual Protection Amulet" data-price="2680" data-img="images/products/annual-protection-amulet.jpg" data-variant="2026 · One Size">
+        <div class="product-img">
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img class="img-default" src="images/products/annual-protection-amulet.jpg" alt="Annual Protection Amulet" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Annual Protection Amulet</div>
+          <div class="product-price">₱2,680.00</div>
+          <div class="product-stars">★★★★★ <span>(28)</span></div>
+          <button class="product-add" onclick="quickAdd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-id="dragon-bracelet" data-name="Dragon Bracelet" data-price="1680" data-compare="1980" data-img="images/products/dragon-bracelet.jpg" data-variant="One Size · Gold">
+        <div class="product-img">
+          <span class="product-badge bestseller">Best Seller</span>
+          <button class="product-wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img class="img-default" src="images/products/dragon-bracelet.jpg" alt="Dragon Bracelet" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Dragon Bracelet</div>
+          <div class="product-price">₱1,680.00 <s>₱1,980.00</s></div>
+          <div class="product-stars">★★★★★ <span>(52)</span></div>
+          <button class="product-add" onclick="quickAdd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-id="destiny-spinner" data-name="Destiny Spinner" data-price="2880" data-img="images/products/destiny-spinner.jpg" data-variant="Gold · One Size">
+        <div class="product-img">
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img class="img-default" src="images/products/destiny-spinner.jpg" alt="Destiny Spinner" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Destiny Spinner</div>
+          <div class="product-price">₱2,880.00</div>
+          <div class="product-stars">★★★★★ <span>(41)</span></div>
+          <button class="product-add" onclick="quickAdd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-id="infinity-ring" data-name="Infinity Ring" data-price="2480" data-compare="2980" data-img="images/products/infinity-ring.jpg" data-variant="Gold · One Size">
+        <div class="product-img">
+          <button class="product-wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img class="img-default" src="images/products/infinity-ring.jpg" alt="Infinity Ring" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Infinity Ring</div>
+          <div class="product-price">₱2,480.00 <s>₱2,980.00</s></div>
+          <div class="product-stars">★★★★★ <span>(58)</span></div>
+          <button class="product-add" onclick="quickAdd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER (theme) ══════════ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="frigga-homepage.html" class="logo" style="margin-bottom:14px"><img src="images/frigga-logo-dark.png" alt="FRIGGA Charmed Life" height="40"></a>
+      <p>Authentic feng shui charms, jewellery, bags and accessories for protection, abundance and harmony.</p>
+      <div class="footer-trust"><div class="footer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Authentic &amp; Blessed</div><div class="footer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secure Payments</div><div class="footer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Worldwide Delivery</div></div>
+    </div>
+    <div class="footer-col"><h4>Customer Care</h4><ul><li><a href="#">Contact Us / WhatsApp</a></li><li><a href="#">FAQs</a></li><li><a href="#">Shipping &amp; Delivery</a></li><li><a href="#">Returns &amp; Exchanges</a></li><li><a href="#">Track Your Order</a></li><li><a href="#">Size Guide</a></li></ul></div>
+    <div class="footer-col"><h4>Shop</h4><ul><li><a href="#">All Products</a></li><li><a href="#">New Arrivals</a></li><li><a href="#">Best Sellers</a></li><li><a href="#">Gift Cards</a></li><li><a href="#">Corporate Gifts</a></li><li><a href="#">Wholesale</a></li></ul></div>
+    <div class="footer-col"><h4>Feng Shui Guide</h4><ul><li><a href="#">What is Feng Shui?</a></li><li><a href="#">Bagua Map Guide</a></li><li><a href="#">Lucky Colours Guide</a></li><li><a href="#">Crystals &amp; Meanings</a></li><li><a href="#">Feng Shui Tips</a></li><li><a href="#">Free Resources</a></li></ul></div>
+    <div class="footer-col"><h4>About FRIGGA</h4><ul><li><a href="#">Our Story</a></li><li><a href="#">Why FRIGGA</a></li><li><a href="#">Authenticity</a></li><li><a href="#">Reviews</a></li><li><a href="#">Press &amp; Media</a></li><li><a href="#">Careers</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 FRIGGA Charmed Life. All rights reserved.</div>
+    <div class="footer-payments"><span class="pay-badge" style="color:#1a1f71;font-weight:700;">VISA</span><span class="pay-badge" style="background:#eb001b;color:#fff;font-weight:700;">MC</span><span class="pay-badge" style="background:#003087;color:#fff;font-weight:700;">PayPal</span><span class="pay-badge" style="background:#006cff;color:#fff;font-weight:700;">GPay</span><span class="pay-badge" style="background:#000;color:#fff;font-weight:700;">ApplePay</span></div>
+    <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+<!-- ══════════ MOBILE DRAWER (theme) ══════════ -->
+<div class="mobile-drawer-overlay" onclick="toggleDrawer()"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header"><span style="font-family:var(--font-display);font-size:20px;">frigga</span><button class="drawer-close" onclick="toggleDrawer()">✕</button></div>
+  <div class="drawer-search"><input type="search" placeholder="Search charms, jewellery, bags…"></div>
+  <ul class="drawer-nav">
+    <li><a href="#">New Arrivals</a></li>
+    <li><button onclick="toggleSubmenu(this)">Shop by Intention <span>＋</span></button><div class="submenu"><a href="#">Wealth &amp; Abundance</a><a href="#">Love &amp; Relationships</a><a href="#">Health</a><a href="#">Career &amp; Success</a><a href="#">Protection</a><a href="#">View All →</a></div></li>
+    <li><button onclick="toggleSubmenu(this)">Shop by Sign <span>＋</span></button><div class="submenu"><a href="#">🐀 Rat</a><a href="#">🐂 Ox</a><a href="#">🐅 Tiger</a><a href="#">🐇 Rabbit</a><a href="#">🐉 Dragon</a><a href="#">🐍 Snake</a><a href="#">🐎 Horse</a><a href="#">🐐 Goat/Sheep</a><a href="#">🐒 Monkey</a><a href="#">🐓 Rooster</a><a href="#">🐕 Dog</a><a href="#">🐖 Pig</a></div></li>
+    <li><button onclick="toggleSubmenu(this)">Collections <span>＋</span></button><div class="submenu"><a href="#">Bangles &amp; Bracelets</a><a href="#">Rings</a><a href="#">Necklaces &amp; Pendants</a><a href="#">Lucky Wealth Bags</a><a href="#">Shawls</a><a href="#">Books &amp; Planners</a></div></li>
+    <li><a href="#">Best Sellers</a></li>
+    <li><a href="#">Feng Shui Guide</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#">About FRIGGA</a></li>
+  </ul>
+  <div class="drawer-brand-links">
+    <a href="https://destara.app" target="_blank" style="display:flex;align-items:center;justify-content:center;padding:10px;background:var(--green-deep);border-radius:var(--radius-sm)"><img src="images/destara-logo-nobg.png" alt="Destara" style="height:28px;filter:brightness(0) invert(1);"></a>
+    <a href="https://www.maritesallen.com" target="_blank" style="display:flex;align-items:center;justify-content:center;padding:10px;border:1px solid var(--border-light);border-radius:var(--radius-sm)"><img src="images/marites-logo-nobg.png" alt="Marites Allen" style="height:20px;"></a>
+  </div>
+  <div class="drawer-store-selector">
+    <label>Store</label><select><option>frigga.com.ph — PHP</option><option>frigga.co.uk — GBP</option><option>frigga-usa.com — USD</option></select>
+    <label style="margin-top:10px;">Language</label><select><option>English</option><option>日本語</option><option>中文</option></select>
+  </div>
+</aside>
+
+<!-- sticky mobile checkout -->
+<div class="sticky-checkout" id="stickyCheckout">
+  <div class="sc-total"><small>Estimated total</small><span id="scTotal">₱0.00</span></div>
+  <button class="sc-btn" onclick="checkout(this)">Checkout</button>
+</div>
+
+<!-- toast -->
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span id="toastMsg"></span></div>
+
+<script>
+/* ══════════ cart engine (Shopify-style) ══════════ */
+const CART_KEY='frigga_cart_v1', DISC_KEY='frigga_disc_v1', FREE_SHIP=10000;
+const CODES={FRIGGA10:{pct:10,label:'10% off your order'},LUNAR15:{pct:15,label:'15% off — Lunar New Year'}};
+
+function loadCart(){try{const c=JSON.parse(localStorage.getItem(CART_KEY));if(Array.isArray(c))return c}catch(e){}return null}
+function saveCart(){localStorage.setItem(CART_KEY,JSON.stringify(cart));syncBadge()}
+function seedCart(){
+  return [
+    {id:'rhino-pendant',name:'Rhino & Elephant Anti-Robbery Pendant',variant:{Sign:'Horse',Finish:'24K Gold',Element:'Fire · Red',Chain:'Silk Cord · Adjustable'},price:3280,qty:1,img:'images/products/rhino-pendant-1.jpg',url:'product-detail.html'},
+    {id:'forever-wealth-bangle',name:'Forever Wealth Bangle',variant:{Element:'Metal · Gold',Size:'One Size · Adjustable',Material:'18K Gold Plated Brass'},price:3980,qty:1,img:'images/products/forever-wealth-bangle.jpg',url:'#'}
+  ];
+}
+let cart=loadCart()||seedCart(); saveCart();
+let discount=null; try{discount=JSON.parse(localStorage.getItem(DISC_KEY))||null}catch(e){}
+
+function peso(n){return '₱'+n.toLocaleString('en-PH',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function count(){return cart.reduce((s,i)=>s+i.qty,0)}
+function subtotal(){return cart.reduce((s,i)=>s+i.price*i.qty,0)}
+function savings(){return cart.reduce((s,i)=>s+((i.compareAt?i.compareAt-i.price:0)*i.qty),0)}
+function discAmount(){return discount?subtotal()*discount.pct/100:0}
+function total(){return subtotal()-discAmount()}
+
+function syncBadge(){document.getElementById('cartBadge').textContent=count()}
+
+/* render */
+function render(){
+  const wrap=document.getElementById('cartItems'), empty=document.getElementById('cartEmpty');
+  syncBadge();
+  if(!cart.length){
+    wrap.parentElement.parentElement.style.display='none';
+    document.getElementById('shipBar').style.display='none';
+    empty.classList.add('show');
+    document.getElementById('stickyCheckout').style.display='none';
+    return;
+  }
+  wrap.innerHTML=cart.map((i,idx)=>`
+  <div class="citem">
+    <a href="${i.url}" class="citem-img"><img src="${i.img}" alt="${i.name}"></a>
+    <div class="ci-body">
+      <a href="${i.url}" class="citem-name">${i.name}</a>
+      <div class="citem-variant">${Object.entries(i.variant||{}).map(([k,v])=>`<b>${k}:</b> ${v}`).join(' · ')}</div>
+      <div class="citem-unit">${peso(i.price)} each</div>
+      <button class="citem-remove" onclick="removeItem(${idx})" aria-label="Remove ${i.name}"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Remove</button>
+    </div>
+    <div class="citem-qty"><div class="qty"><button onclick="setQty(${idx},${i.qty-1})" aria-label="Decrease">−</button><input type="text" value="${i.qty}" readonly aria-label="Quantity"><button onclick="setQty(${idx},${i.qty+1})" aria-label="Increase">+</button></div></div>
+    <div class="citem-tot"><div class="citem-price">${peso(i.price*i.qty)}${i.compareAt?`<s>${peso(i.compareAt*i.qty)}</s>`:''}</div></div>
+  </div>`).join('');
+
+  document.getElementById('sumSubtotal').textContent=peso(subtotal());
+  document.getElementById('sumTotal').textContent=peso(total());
+  document.getElementById('checkoutTotal').textContent=peso(total());
+  document.getElementById('scTotal').textContent=peso(total());
+  document.getElementById('cartCountLabel').textContent=count()+(count()>1?' items':' item');
+
+  const sv=savings();
+  document.getElementById('saveRow').style.display=sv>0?'flex':'none';
+  if(sv>0)document.getElementById('saveVal').textContent='−'+peso(sv);
+
+  if(discount){
+    document.getElementById('discRow').style.display='flex';
+    document.getElementById('discCode').textContent='('+discount.code+')';
+    document.getElementById('discVal').textContent='−'+peso(discAmount());
+  }else{document.getElementById('discRow').style.display='none'}
+
+  /* free shipping progress */
+  const sub=subtotal(), pct=Math.min(100,sub/FREE_SHIP*100), fill=document.getElementById('shipFill');
+  fill.style.width=pct+'%'; fill.classList.toggle('full',pct>=100);
+  if(sub>=FREE_SHIP){document.getElementById('shipMsg').innerHTML='🎉 Congratulations! You\'ve unlocked <b>FREE worldwide shipping</b>'}
+  else{document.getElementById('shipMsg').innerHTML=`You're <span class="away">${peso(FREE_SHIP-sub)}</span> away from <b>FREE worldwide shipping</b>`}
+}
+
+function setQty(idx,q){if(q<1){removeItem(idx);return}cart[idx].qty=q;saveCart();render()}
+function removeItem(idx){const name=cart[idx].name;cart.splice(idx,1);saveCart();render();toast(name+' removed')}
+function quickAdd(btn){
+  const c=btn.closest('.product-card');
+  const item={id:c.dataset.id,name:c.dataset.name,variant:{Variant:c.dataset.variant},price:+c.dataset.price,compareAt:+(c.dataset.compare||0)||null,qty:1,img:c.dataset.img,url:'product-detail.html'};
+  const ex=cart.find(i=>i.id===item.id); if(ex)ex.qty++; else cart.push(item);
+  saveCart();render();
+  const old=btn.innerHTML;btn.classList.add('added');btn.textContent='✓ Added!';
+  setTimeout(()=>{btn.classList.remove('added');btn.innerHTML=old},1400);
+  toast(item.name+' added to cart');
+}
+function applyDiscount(){
+  const inp=document.getElementById('discInput'),msg=document.getElementById('discMsg'),code=inp.value.trim().toUpperCase();
+  msg.style.display='block';msg.classList.remove('error');inp.classList.remove('err');
+  const c=CODES[code];
+  if(!c){inp.classList.add('err');msg.classList.add('error');msg.textContent='Enter a valid discount code';setTimeout(()=>inp.classList.remove('err'),400);return}
+  discount={code,pct:c.pct};localStorage.setItem(DISC_KEY,JSON.stringify(discount));
+  msg.textContent='✓ '+code+' applied — '+c.label;render();
+}
+function clearDiscount(){discount=null;localStorage.removeItem(DISC_KEY);document.getElementById('discMsg').style.display='none';document.getElementById('discInput').value='';render()}
+function toggleNote(btn){btn.classList.toggle('open');document.getElementById('noteBox').classList.toggle('open')}
+function checkout(btn){
+  btn.classList.add('processing');
+  const label=btn.querySelector('#checkoutLabel')||btn;const old=btn.tagName==='BUTTON'?label.innerHTML:btn.textContent;
+  setTimeout(()=>{
+    if(btn.id==='checkoutBtn'){label.innerHTML='Redirecting to secure checkout…'}
+    else{btn.textContent='Redirecting…'}
+    setTimeout(()=>{
+      toast('Demo — checkout continues on Shopify\'s secure page');
+      btn.classList.remove('processing');
+      if(btn.id==='checkoutBtn')label.innerHTML=old;else btn.textContent='Checkout';
+    },1400);
+  },500);
+}
+let toastTimer;
+function toast(msg){
+  const t=document.getElementById('toast');document.getElementById('toastMsg').textContent=msg;
+  t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+/* ── theme drawer ── */
+function toggleDrawer(){const d=document.getElementById('mobileDrawer'),o=document.querySelector('.mobile-drawer-overlay');d.classList.toggle('active');o.classList.toggle('active');document.body.style.overflow=d.classList.contains('active')?'hidden':''}
+function toggleSubmenu(b){const s=b.nextElementSibling,i=b.querySelector('span');s.classList.toggle('open');i.textContent=s.classList.contains('open')?'−':'＋'}
+
+render();
+</script>
+</body>
+</html>
